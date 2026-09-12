@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Sarwesh Varan | Portfolio</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fb;
+        color: #222;
+    }
+
+    /* NAVBAR */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        padding: 15px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    nav h2 {
+        color: white;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 18px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    nav ul li a:hover {
+        color: #38bdf8;
+    }
+
+    .login {
+        background: #22c55e;
+        padding: 8px 14px;
+        border-radius: 5px;
+    }
+
+    /* COMMON */
+    section {
+        min-height: 100vh;
+        padding: 100px 8%;
+    }
+
+    .title {
+        text-align: center;
+        color: #1e3a8a;
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    /* HOME */
+    #home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    }
+
+    #home h1 {
+        font-size: 52px;
+        margin-bottom: 15px;
+    }
+
+    #home h1 span {
+        color: #38bdf8;
+    }
+
+    #home p {
+        font-size: 19px;
+        margin: 10px 0;
+    }
+
+    .btn {
+        display: inline-block;
+        margin: 20px 5px;
+        padding: 12px 25px;
+        background: #38bdf8;
+        color: #111827;
+        text-decoration: none;
+        border-radius: 7px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background: white;
+    }
+
+    /* ABOUT */
+    .about {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+        line-height: 1.8;
+        font-size: 18px;
+    }
+
+    /* CARDS */
+    .cards {
+        display: grid;
+        grid-template-columns:
+            repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .card h3 {
+        color: #1e3a8a;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        line-height: 1.6;
+    }
+
+    /* SKILLS */
+    .skills {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .skill {
+        margin-bottom: 25px;
+    }
+
+    .skill-name {
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .bar {
+        width: 100%;
+        height: 12px;
+        background: #ddd;
+        border-radius: 10px;
+    }
+
+    .progress {
+        height: 12px;
+        background: #2563eb;
+        border-radius: 10px;
+    }
+
+    /* CONTACT */
+    form {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0 15px;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        font-size: 15px;
+    }
+
+    textarea {
+        height: 130px;
+        resize: none;
+    }
+
+    button {
+        padding: 12px 25px;
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    button:hover {
+        background: #1e40af;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #111827;
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+        nav {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        nav ul {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #home h1 {
+            font-size: 38px;
+        }
+
+        #home p {
+            font-size: 16px;
+        }
+
+        section {
+            padding: 110px 5%;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- NAVIGATION -->
+<nav>
+
+    <h2>Sarwesh</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#academic">Academic</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#internship">Internship</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+            <a href="login.jsp" class="login">Login</a>
+        </li>
+    </ul>
+
+</nav>
+
+
+<!-- HOME -->
+<section id="home">
+
+    <div>
+
+        <h1>
+            Hello, I'm
+            <span>Sarwesh Varan</span>
+        </h1>
+
+        <p>
+            Computer Science Engineering Student
+        </p>
+
+        <p>
+            Java | Python | SQL | AI/ML | Web Development | IoT
+        </p>
+
+        <a href="#projects" class="btn">
+            View Projects
+        </a>
+
+        <a href="#contact" class="btn">
+            Contact Me
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2 class="title">About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am Sarwesh Varan, a passionate Computer Science
+            Engineering student currently pursuing my III Year
+            in Computer Science and Engineering.
+        </p>
+
+        <br>
+
+        <p>
+            I have a strong interest in Software Development,
+            Artificial Intelligence, Machine Learning,
+            Web Development, Internet of Things and UI/UX Design.
+        </p>
+
+        <br>
+
+        <p>
+            I enjoy solving programming problems and developing
+            real-world applications using Java, Python, SQL,
+            HTML, CSS and JavaScript.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ACADEMIC DETAILS -->
+<section id="academic">
+
+    <h2 class="title">Academic Details</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>B.E. Computer Science Engineering</h3>
+
+            <p>
+                Year: III Year
+            </p>
+
+            <p>
+                Department: Computer Science and Engineering
+            </p>
+
+            <p>
+                Section: C
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Core Subjects</h3>
+
+            <p>Data Structures and Algorithms</p>
+            <p>Database Management Systems</p>
+            <p>Object Oriented Programming</p>
+            <p>Artificial Intelligence</p>
+            <p>Computer Networks</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Current Subjects</h3>
+
+            <p>Internet Programming</p>
+            <p>Introduction to IoT</p>
+            <p>IoT Laboratory</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2 class="title">My Projects</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>
+                AI-Driven Smart Inventory Management System
+            </h3>
+
+            <p>
+                An AI-powered inventory management system
+                designed for mobile and laptop shops.
+            </p>
+
+            <br>
+
+            <p>
+                <b>Technologies:</b>
+                Python, AI/ML, Excel, HTML, CSS, JavaScript
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Real-Time Service Desk Bot
+            </h3>
+
+            <p>
+                An Agentic AI based service desk chatbot
+                using Retrieval-Augmented Generation.
+            </p>
+
+            <br>
+
+            <p>
+                <b>Technologies:</b>
+                Python, LangChain, RAG, FastAPI, Gradio
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Hospital Management System
+            </h3>
+
+            <p>
+                A web-based application for managing
+                hospital-related information and services.
+            </p>
+
+            <br>
+
+            <p>
+                <b>Technologies:</b>
+                HTML, CSS, JavaScript
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+
+    <h2 class="title">Achievements</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>AI & ML Internship</h3>
+
+            <p>
+                Completed an Artificial Intelligence and
+                Machine Learning internship.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Machine Learning Project</h3>
+
+            <p>
+                Developed a Bank Loan Status Approval
+                prediction system using Machine Learning.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Problem Solving</h3>
+
+            <p>
+                Practicing Data Structures and Algorithms
+                and improving programming skills.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2 class="title">My Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">
+
+            <div class="skill-name">
+                Java - 85%
+            </div>
+
+            <div class="bar">
+                <div class="progress"
+                     style="width:85%">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                Python - 90%
+            </div>
+
+            <div class="bar">
+                <div class="progress"
+                     style="width:90%">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                SQL - 80%
+            </div>
+
+            <div class="bar">
+                <div class="progress"
+                     style="width:80%">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                HTML / CSS / JavaScript - 90%
+            </div>
+
+            <div class="bar">
+                <div class="progress"
+                     style="width:90%">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTERNSHIP -->
+<section id="internship">
+
+    <h2 class="title">Internship</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>
+                PYDUN Technology Pvt. Ltd.
+            </h3>
+
+            <p>
+                <b>Role:</b>
+                Artificial Intelligence and Machine
+                Learning Intern
+            </p>
+
+            <br>
+
+            <p>
+                <b>Duration:</b>
+                December 2025
+            </p>
+
+            <br>
+
+            <p>
+                <b>Project:</b>
+                Bank Loan Status Approval Using
+                Artificial Intelligence and Machine Learning
+            </p>
+
+            <br>
+
+            <p>
+                <b>Technologies:</b>
+                Python, Pandas, NumPy,
+                Scikit-learn and Joblib
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2 class="title">Contact Me</h2>
+
+    <form id="contactForm"
+          action="ContactServlet"
+          method="post">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required>
+
+        <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required>
+
+        <textarea
+            name="message"
+            placeholder="Your Message"
+            required></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Sarwesh Varan
+    </p>
+
+    <p>
+        Java | Python | AI/ML | Web Development | IoT
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+    // Smooth scrolling
+
+    document.querySelectorAll(
+        'a[href^="#"]'
+    ).forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+                var target =
+                    document.querySelector(
+                        this.getAttribute("href")
+                    );
+
+                if (target) {
+
+                    target.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+                }
+
+            }
+        );
+
+    });
+
+
+    // Contact form validation
+
+    document.getElementById(
+        "contactForm"
+    ).addEventListener(
+        "submit",
+        function(event) {
+
+            var name =
+                document.querySelector(
+                    'input[name="name"]'
+                ).value.trim();
+
+            var email =
+                document.querySelector(
+                    'input[name="email"]'
+                ).value.trim();
+
+            if (name.length < 3) {
+
+                alert(
+                    "Please enter a valid name."
+                );
+
+                event.preventDefault();
+
+                return;
+            }
+
+            if (!email.includes("@")) {
+
+                alert(
+                    "Please enter a valid email address."
+                );
+
+                event.preventDefault();
+
+                return;
+            }
+
+            alert(
+                "Your message is being submitted!"
+            );
+
+        }
+    );
+
+
+    // Welcome message in console
+
+    console.log(
+        "Welcome to Sarwesh Varan Portfolio!"
+    );
+
+</script>
+```
+
+</body>
+</html>
